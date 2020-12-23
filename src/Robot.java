@@ -5,13 +5,13 @@ public class Robot {
 		System.out.println("Hello World !");
 		
 		int[] robot = {0, 0, 0};
-		String path = "LRRLA";
-
-		for(int i = 0; i < 20; i ++) {
+		String path = "";
+		
+		if(args.length != 1) for(int i = 0; i < 20; i ++) {
 			if(Math.random() * 3 < 1) path += "L";
 			else if(Math.random() * 2 < 1) path += "R";
 			else path += "A";
-		}
+		} else path = args[0];
 		
 		System.out.println("The path is : " + path);
 		
